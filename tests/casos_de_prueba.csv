@@ -1,0 +1,35 @@
+﻿id,tipo,pregunta,documento_esperado,seccion_esperada,pagina_esperada,comportamiento_esperado
+R01,respondible,¿Qué medios de pago acepta DEL PINO?,01_guia_comercial_y_preguntas_frecuentes.pdf,4. Medios de pago,4,"Efectivo coordinado, transferencia, Mercado Pago y cuotas según disponibilidad."
+R02,respondible,¿La compra de la tienda online se paga completa?,01_guia_comercial_y_preguntas_frecuentes.pdf,3-4,4,"Sí, pago completo antes de preparar el pedido."
+R03,respondible,¿Cómo se paga una cortina a medida?,01_guia_comercial_y_preguntas_frecuentes.pdf | 03_pedidos_personalizados_cambios_y_garantias.pdf,01: 4. Medios de pago | 03: 4. Pago y comienzo de producción,4,Pago completo o seña 50% y saldo 50% antes del despacho.
+R04,respondible,¿Qué datos tengo que pedir para una cortina a medida?,01_guia_comercial_y_preguntas_frecuentes.pdf | 03_pedidos_personalizados_cambios_y_garantias.pdf,01: 7. Preguntas frecuentes comerciales | 03: 2. Datos para pedidos personalizados,01: 6 | 03: 3,"Barral o riel, medida del barral o riel y distancia hasta el piso."
+R05,respondible,¿Alcanza con medir la ventana?,01_guia_comercial_y_preguntas_frecuentes.pdf | 03_pedidos_personalizados_cambios_y_garantias.pdf,01: 7. Preguntas frecuentes comerciales | 03: 2. Datos para pedidos personalizados,01: 6 | 03: 3,"No, la medida de la ventana sola no es suficiente."
+R06,respondible,¿DEL PINO hace envíos a todo el país?,01_guia_comercial_y_preguntas_frecuentes.pdf | 02_guia_de_envios_y_entregas.pdf,01: 7. Preguntas frecuentes comerciales | 02: 2. Cobertura y operador logístico,01: 6 | 02: 3,"Sí, envíos nacionales mediante Correo Argentino."
+R07,respondible,¿Cómo se calcula el costo del envío?,02_guia_de_envios_y_entregas.pdf,3. Cálculo del costo de envío,4,Por peso y tamaño; puede requerir datos de destino.
+R08,respondible,¿El plazo de 10 días incluye la entrega?,02_guia_de_envios_y_entregas.pdf,4-5,4-5,"No, es referencia de despacho."
+R09,respondible,¿Qué datos se piden para consultar un envío?,01_guia_comercial_y_preguntas_frecuentes.pdf | 02_guia_de_envios_y_entregas.pdf,01: 8. Consulta y seguimiento de pedidos | 02: 6. Seguimiento y estados,01: 7 | 02: 5,"Número de pedido, contacto y tracking si existe."
+R10,respondible,¿Qué hay que pedir si el paquete llegó dañado?,02_guia_de_envios_y_entregas.pdf | 03_pedidos_personalizados_cambios_y_garantias.pdf,02: 9. Paquetes dañados o extraviados | 03: 10. Evidencia requerida,02: 7 | 03: 8,Reporte en 72 horas y evidencia.
+R11,respondible,¿Cuánto tiempo hay para devolver un producto estándar por arrepentimiento?,03_pedidos_personalizados_cambios_y_garantias.pdf,6. Cambios y devoluciones de estándar,5,15 días corridos.
+R12,respondible,¿Se puede devolver una cortina a medida porque el cliente cambió de opinión?,03_pedidos_personalizados_cambios_y_garantias.pdf,7. Devoluciones de personalizados,6,"No, si fue confeccionada según las especificaciones aprobadas."
+R13,respondible,¿Cuánto dura la garantía educativa?,03_pedidos_personalizados_cambios_y_garantias.pdf,9. Garantía educativa,7,90 días corridos.
+R14,respondible,¿Quién paga el reenvío si la dirección estaba mal?,02_guia_de_envios_y_entregas.pdf,8. Dirección y entregas fallidas,6,Depende de quién cometió el error.
+R15,respondible,¿Cuándo empieza a fabricarse un pedido personalizado?,03_pedidos_personalizados_cambios_y_garantias.pdf,4. Pago y comienzo de producción,4,Después de aprobar especificaciones y verificar pago.
+R16,respondible,¿Qué pasa si el cliente quiere cambiar el color después de iniciada la producción?,03_pedidos_personalizados_cambios_y_garantias.pdf,5. Cambios y cancelación,5,No está garantizado; requiere revisión o nuevo presupuesto.
+R17,respondible,¿Qué soluciones puede aprobar DEL PINO ante una falla?,03_pedidos_personalizados_cambios_y_garantias.pdf,11. Resoluciones,8,"Ajuste, reemplazo, pieza o reembolso según evaluación."
+R18,respondible,¿En cuánto tiempo inicia DEL PINO un reembolso aprobado?,03_pedidos_personalizados_cambios_y_garantias.pdf,11. Resoluciones,8,Dentro de 5 días hábiles tras validación.
+F01,fallback,¿Cuánto cuesta hoy una cortina de tres metros?,,,,Fallback por precio/presupuesto.
+F02,fallback,¿Hay stock de cortina beige?,,,,Fallback por stock real.
+F03,fallback,¿Qué descuento me pueden hacer?,,,,Fallback por descuento no autorizado.
+F04,fallback,¿Cuánto cuesta el envío a mi casa?,,,,Explicar variables y derivar cotización real.
+F05,fallback,¿Puede llegar el viernes 24?,,,,No prometer fecha; derivar.
+F06,fallback,¿Dónde está ahora el pedido DP-1234?,,,,No hay integración de seguimiento.
+F07,fallback,¿Quedan tres unidades del combo azul?,,,,Fallback por inventario real.
+F08,fallback,¿Cuál es el número de cuotas sin interés disponible hoy?,,,,Depende de Mercado Pago al momento de pagar.
+F09,fallback,¿Qué sucursal de Correo Argentino está abierta ahora?,,,,Información externa en tiempo real.
+F10,fallback,¿Puedo autorizar un reembolso de $80.000?,,,,Decisión y monto real requieren responsable.
+A01,ambiguo,La cortina a medida llegó más corta de lo esperado. ¿La cambiamos?,03_pedidos_personalizados_cambios_y_garantias.pdf,13. Casos fronterizos,9,"Registrar dentro de 72 horas si la diferencia era visible, comparar medidas aprobadas y no decidir sin evidencia."
+A02,ambiguo,"La caja llegó golpeada, pero la cortina parece estar bien. ¿Corresponde devolución?",03_pedidos_personalizados_cambios_y_garantias.pdf,13. Casos fronterizos,9,Registrar evidencia; no aprobar automáticamente.
+A03,ambiguo,El cliente pagó la seña y ahora quiere cambiar el color. ¿Se puede?,03_pedidos_personalizados_cambios_y_garantias.pdf,5 y 13,"5,9",Verificar si la producción comenzó.
+A04,ambiguo,El color se ve distinto al de la foto. ¿Es una falla?,03_pedidos_personalizados_cambios_y_garantias.pdf,13. Casos fronterizos,9,Comparar variante y evidencia.
+A05,ambiguo,El tracking no cambia hace varios días. ¿Está perdido?,02_guia_de_envios_y_entregas.pdf,7 y 9,6-7,Revisar y consultar; no declarar extravío.
+A06,ambiguo,La costura se abrió luego del lavado. ¿Cubre garantía?,03_pedidos_personalizados_cambios_y_garantias.pdf,9. Garantía educativa,7,Pedir instrucciones/evidencia; no decidir automáticamente.
