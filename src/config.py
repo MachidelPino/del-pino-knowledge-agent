@@ -1,4 +1,4 @@
-﻿"""Configuration for the DEL PINO Knowledge Agent."""
+"""Configuration for the DEL PINO Knowledge Agent."""
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ FAISS_INDEX_DIR = PROJECT_ROOT / "storage" / "faiss_index"
 CHUNK_SIZE = 900
 CHUNK_OVERLAP = 150
 RETRIEVAL_K = 4
+CHAT_TEMPERATURE = 0.0
 
 EXPECTED_PDF_FILES = (
     "01_guia_comercial_y_preguntas_frecuentes.pdf",
@@ -58,7 +59,56 @@ def get_embedding_model() -> str:
     return model
 
 
+def get_chat_model() -> str:
+    """Return the configured Gemini chat model."""
+
+    model = os.getenv("GEMINI_CHAT_MODEL", "").strip()
+
+    if not model:
+        raise ConfigurationError(
+            "Falta GEMINI_CHAT_MODEL. "
+            "Agregalo al archivo .env local."
+        )
+
+    return model
+
+
+def get_relevance_threshold() -> float | None:
+    """Return the optional minimum cosine-similarity threshold."""
+
+    raw_value = os.getenv("RAG_RELEVANCE_THRESHOLD", "").strip()
+
+    if not raw_value:
+        return None
+
+    try:
+        threshold = float(raw_value)
+    except ValueError as exc:
+        raise ConfigurationError(
+            "RAG_RELEVANCE_THRESHOLD debe ser un número "
+            "entre -1 y 1, o quedar vacío."
+        ) from exc
+
+    if not -1.0 <= threshold <= 1.0:
+        raise ConfigurationError(
+            "RAG_RELEVANCE_THRESHOLD debe estar entre -1 y 1."
+        )
+
+    return threshold
+
+
 def validate_embedding_config() -> tuple[str, str]:
-    """Validate and return the embedding API key and model."""
+    """Validate and return embedding configuration."""
 
     return get_google_api_key(), get_embedding_model()
+
+
+def validate_rag_config() -> tuple[str, str, str, float | None]:
+    """Validate and return all configuration required by the RAG pipeline."""
+
+    return (
+        get_google_api_key(),
+        get_embedding_model(),
+        get_chat_model(),
+        get_relevance_threshold(),
+    )
