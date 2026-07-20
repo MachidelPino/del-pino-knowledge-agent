@@ -1,0 +1,43 @@
+﻿# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Generated vector index
+storage/faiss_index/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
