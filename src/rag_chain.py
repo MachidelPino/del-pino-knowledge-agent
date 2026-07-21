@@ -144,7 +144,8 @@ MIXED_ANSWERABLE_MARKERS = (
     "medida",
     "medidas",
     "transferencia",
-    "envios a todo el pais",
+    "envio",
+    "envios",
     "llego danado",
     "producto danado",
 )
