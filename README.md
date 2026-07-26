@@ -10,9 +10,9 @@ Agente interno de conocimiento basado en RAG para consultar políticas comercial
 
 **Aplicación desplegada en OCI:** http://161.153.216.80:8501
 
-> La aplicación fue verificada durante el despliegue en OCI Compute. La disponibilidad de la URL depende de que la instancia permanezca iniciada y conserve la misma IPv4 pública. Antes de evaluar o entregar el proyecto, se debe comprobar nuevamente que responda.
+![DEL PINO Knowledge Agent ejecutándose en OCI](assets/screenshots/oci-app-public.png)
 
-La evidencia debe mostrar el agente abierto mediante la URL pública, una consulta respondible, la respuesta generada y las fuentes con archivo y página.
+> La aplicación fue verificada durante el despliegue en OCI Compute. La disponibilidad de la URL depende de que la instancia permanezca iniciada y conserve la misma IPv4 pública.
 
 ## Problema que resuelve
 
@@ -390,21 +390,11 @@ La guía detallada está en [`docs/oci-deployment.md`](docs/oci-deployment.md).
 
 ## Evidencia de OCI
 
-La captura principal debe almacenarse como:
+La captura principal:
 
 ```text
-assets/screenshots/oci-agent-response.png
+assets/screenshots/oci-app-public.png
 ```
-
-Debe mostrar:
-
-- el nombre DEL PINO Knowledge Agent;
-- la aplicación abierta con la URL pública;
-- una pregunta respondible;
-- la respuesta;
-- al menos una fuente con archivo y página.
-
-Antes de entregar, comprobar que tanto la imagen relativa como la URL pública funcionen desde una sesión sin autenticar.
 
 ## Limitaciones
 
